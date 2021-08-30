@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_margin="0.1dp"
+    android:background="@drawable/all_side_border"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/inner"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/gregorian_days_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="#292828"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            tools:text="gregorian_days_name" />
+
+        <TextView
+            android:id="@+id/gregorian_days_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:textColor="#292828"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/gregorian_days_name"
+            app:layout_constraintStart_toStartOf="@+id/gregorian_days_name"
+            app:layout_constraintTop_toBottomOf="@+id/gregorian_days_name"
+            tools:text="gregorian_days_number" />
+
+
+        <TextView
+            android:id="@+id/hijri_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:textColor="#2A6803"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/gregorian_days_number"
+            app:layout_constraintStart_toStartOf="@+id/gregorian_days_number"
+            app:layout_constraintTop_toBottomOf="@+id/gregorian_days_number"
+            tools:text="hijri_days" />
+
+
+        <FrameLayout
+            android:id="@+id/hijri_Month"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/fill_circle_grey"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/hijri_days">
+
+            <TextView
+                android:id="@+id/hijri_Month_circle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:textColor="#2A6803"
+                android:textSize="12sp"
+                tools:text="08" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/hajri_year_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="#2A6803"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/hijri_Month"
+            app:layout_constraintStart_toEndOf="@+id/hijri_Month"
+            app:layout_constraintTop_toTopOf="@+id/hijri_Month"
+            tools:text="1245" />
+
+        <TextView
+            android:id="@+id/hijri_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:textColor="#2A6803"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/hijri_Month"
+            app:layout_constraintStart_toStartOf="@+id/hijri_Month"
+            app:layout_constraintTop_toBottomOf="@+id/hijri_Month"
+            tools:text="hijri_year" />
+
+        <TextView
+
+            android:id="@+id/hijri_month_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:textColor="#2A6803"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hijri_year"
+            tools:text="hijri_month_Name" />
+
+        <!-- <TextView
+            android:id="@+id/namaztime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="1dp"
+            android:gravity="center_horizontal"
+            android:text="Timing"
+            android:textColor="#111211"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hijri_month_Name"
+            tools:text="namaztime" />
+
+       <TextView
+            android:id="@+id/Fajr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:textColor="#21628E"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/namaztime"
+            app:layout_constraintStart_toStartOf="@+id/namaztime"
+            app:layout_constraintTop_toBottomOf="@+id/namaztime"
+            tools:text="Fajr" />
+
+        <TextView
+            android:id="@+id/Dhuhr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:textColor="#21628E"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/Fajr"
+            app:layout_constraintStart_toStartOf="@+id/Fajr"
+            app:layout_constraintTop_toBottomOf="@+id/Fajr"
+            tools:text="Dhuhr" />
+
+        <TextView
+            android:id="@+id/Asr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:textColor="#21628E"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/Dhuhr"
+            app:layout_constraintStart_toStartOf="@+id/Dhuhr"
+            app:layout_constraintTop_toBottomOf="@+id/Dhuhr"
+            tools:text="Asr" />
+
+        <TextView
+            android:id="@+id/Maghrib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:textColor="#21628E"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/Asr"
+            app:layout_constraintStart_toStartOf="@+id/Asr"
+            app:layout_constraintTop_toBottomOf="@+id/Asr"
+            tools:text="Maghrib" />
+
+        <TextView
+            android:id="@+id/Imsak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:textColor="#21628E"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/Maghrib"
+            app:layout_constraintStart_toStartOf="@+id/Maghrib"
+            app:layout_constraintTop_toBottomOf="@+id/Maghrib"
+            tools:text="Imsak" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

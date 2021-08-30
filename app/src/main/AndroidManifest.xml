@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.health">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+
+    <!-- Need to receive a broadcast when the system reboots -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.duas.DuasActivity" />
+        <activity android:name=".ui.inspiration.InspirationActivity" />
+        <activity android:name=".ui.calender.CalenderActvity" />
+        <activity android:name=".ui.cummunity.CummunityActivity" />
+        <activity android:name=".ui.fragment.Hisnul_muslim_Activity" />
+        <activity android:name=".ui.duas.ReadingDuas" />
+        <activity android:name=".re_arrange_today_card.Re_Arrange_Todays_Card_Activity" />
+        <activity android:name=".quran.ReadingQuranActvity" />
+        <activity android:name=".tracker.TrackerActivity" />
+        <activity android:name=".allahname.AllahNameActivity" />
+        <activity android:name=".allahname.AllahNameDetails" />
+
+
+        <receiver android:name=".alarm.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:process=":remote" android:name=".alarm.Alarm"/>
+
+        <service android:name=".alarm.YourService"
+
+
+            android:enabled="true"
+            android:process=":your_service"/>
+    </application>
+
+</manifest>

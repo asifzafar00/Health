@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_today"
+        android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
+        android:title="@string/today_s" />
+
+    <item
+        android:id="@+id/nav_prayer"
+        android:icon="@drawable/ic_access_time_black_24dp"
+        android:title="@string/prayer" />
+
+    <item
+        android:id="@+id/nav_quran"
+        android:icon="@drawable/ic_local_library_black_24dp"
+        android:title="@string/quran" />
+
+    <item
+        android:id="@+id/nav_qibla"
+        android:icon="@drawable/ic_explore_black_24dp"
+        android:title="@string/qibla" />
+
+    <item
+        android:id="@+id/nav_more"
+        android:icon="@drawable/ic_more_horiz_black_24dp"
+        android:title="@string/more" />
+
+</menu>

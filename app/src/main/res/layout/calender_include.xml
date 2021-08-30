@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/geo_date"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/calendar" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/geo_date"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/previous"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="5dp"
+        android:clickable="true"
+        android:contentDescription="@string/calendar"
+        android:drawableStart="@drawable/ic_chevron_left_black_24dp"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="@string/previous"
+        android:textColor="#05125A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mRecyclerView" />
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginEnd="5dp"
+        android:clickable="true"
+        android:contentDescription="@string/calendar"
+        android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="@string/next"
+        android:textColor="#05125A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mRecyclerView" />
+
+    <TextView
+        android:id="@+id/namaztime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:text="Timings"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/previous"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/Fajr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:textColor="#21628E"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/namaztime"
+        app:layout_constraintStart_toStartOf="@+id/namaztime"
+        app:layout_constraintTop_toBottomOf="@+id/namaztime"
+        tools:text="Fajr"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/Dhuhr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:textColor="#21628E"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/Fajr"
+        app:layout_constraintStart_toStartOf="@+id/Fajr"
+        app:layout_constraintTop_toBottomOf="@+id/Fajr"
+        tools:text="Dhuhr"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/Asr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:textColor="#21628E"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/Dhuhr"
+        app:layout_constraintStart_toStartOf="@+id/Dhuhr"
+        app:layout_constraintTop_toBottomOf="@+id/Dhuhr"
+        tools:text="Asr"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/Maghrib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:textColor="#21628E"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/Asr"
+        app:layout_constraintStart_toStartOf="@+id/Asr"
+        app:layout_constraintTop_toBottomOf="@+id/Asr"
+        tools:text="Maghrib"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/Imsak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:gravity="center"
+        android:textColor="#21628E"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/Maghrib"
+        app:layout_constraintStart_toStartOf="@+id/Maghrib"
+        app:layout_constraintTop_toBottomOf="@+id/Maghrib"
+        tools:text="Imsak"
+        tools:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

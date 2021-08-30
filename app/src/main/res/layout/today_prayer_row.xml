@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginTop="100dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/fajr_thumbnail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_brightness_1_black_24dp" />
+
+        <TextView
+            android:id="@+id/fajr_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/fajr_thumbnail"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Fajr" />
+
+
+        <TextView
+            android:id="@+id/fajr_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/fajr_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/fajr_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_surround_sound_black_24dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container1">
+
+
+        <ImageView
+            android:id="@+id/sunrise_thumbnail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_brightness_1_black_24dp" />
+
+        <TextView
+            android:id="@+id/sunrise_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sunrise_thumbnail"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Fajr" />
+
+        <ImageView
+            android:id="@+id/sunrise_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_surround_sound_black_24dp" />
+
+        <TextView
+            android:id="@+id/sunrise_timing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/sunrise_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container2">
+
+
+        <ImageView
+            android:id="@+id/Dhuhr_thumbnail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_brightness_1_black_24dp" />
+
+        <TextView
+            android:id="@+id/Dhuhr_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Dhuhr_thumbnail"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Fajr" />
+
+        <ImageView
+            android:id="@+id/Dhuhr_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_surround_sound_black_24dp" />
+
+        <TextView
+            android:id="@+id/Dhuhr_timing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Dhuhr_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container3">
+
+
+        <ImageView
+            android:id="@+id/Asr_thumbnail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_brightness_1_black_24dp" />
+
+        <TextView
+            android:id="@+id/Asr_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Asr_thumbnail"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Fajr" />
+
+        <ImageView
+            android:id="@+id/Asr_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_surround_sound_black_24dp" />
+
+        <TextView
+            android:id="@+id/Asr_timing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Asr_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container4">
+
+
+        <ImageView
+            android:id="@+id/Sunset_thumbnail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_brightness_1_black_24dp" />
+
+        <TextView
+            android:id="@+id/Sunset_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Sunset_thumbnail"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Fajr" />
+
+        <ImageView
+            android:id="@+id/Sunset_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_surround_sound_black_24dp" />
+
+        <TextView
+            android:id="@+id/Sunset_timing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Sunset_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container5">
+
+
+        <ImageView
+            android:id="@+id/Maghrib_thumbnail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_brightness_1_black_24dp" />
+
+        <TextView
+            android:id="@+id/Maghrib_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Maghrib_thumbnail"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Fajr" />
+
+        <ImageView
+            android:id="@+id/Maghrib_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_surround_sound_black_24dp" />
+
+        <TextView
+            android:id="@+id/Maghrib_timing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Maghrib_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container6">
+
+
+        <ImageView
+            android:id="@+id/Isha_thumbnail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_brightness_1_black_24dp" />
+
+        <TextView
+            android:id="@+id/Isha_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Isha_thumbnail"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Fajr" />
+
+        <ImageView
+            android:id="@+id/Isha_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_surround_sound_black_24dp" />
+
+        <TextView
+            android:id="@+id/Isha_timing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Isha_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container7">
+
+
+        <ImageView
+            android:id="@+id/Imsak_thumbnail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_brightness_1_black_24dp" />
+
+        <TextView
+            android:id="@+id/Imsak_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Imsak_thumbnail"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Fajr" />
+
+        <ImageView
+            android:id="@+id/Imsak_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_surround_sound_black_24dp" />
+
+        <TextView
+            android:id="@+id/Imsak_timing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Imsak_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container8">
+
+
+        <ImageView
+            android:id="@+id/Midnight_thumbnail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_brightness_1_black_24dp" />
+
+        <TextView
+            android:id="@+id/Midnight_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Midnight_thumbnail"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Fajr" />
+
+        <ImageView
+            android:id="@+id/Midnight_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_surround_sound_black_24dp" />
+
+        <TextView
+            android:id="@+id/Midnight_timing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Midnight_button"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

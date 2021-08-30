@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/nav_achievements"
+            android:title="@string/achievements" />
+        <item
+            android:id="@+id/nav_WeeklySummary"
+            android:title="@string/weekly_summary" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/for_you"
+            android:title="@string/for_you" />
+        <item
+            android:id="@+id/nav_Events"
+            android:title="@string/events" />
+        <item
+            android:id="@+id/nav_setting"
+            android:title="@string/setting" />
+        <item
+            android:id="@+id/info"
+            android:title="@string/info" />
+        <item
+            android:id="@+id/version"
+            android:title="@string/version" />
+    </group>
+</menu>
